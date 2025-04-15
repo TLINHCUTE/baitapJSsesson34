@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Công Việc</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Course List</h1>
+        <div class="search-bar">
+            <input type="text" id="content" placeholder="Content" onchange="searchCourses()" />
+            <input type="date" id="search-date" placeholder="Search by start date" onchange="searchCourses()" />
+            <select id="choose-status">
+                <option value="">Choose status</option>
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <input type="text" id="username" placeholder="Username" />
+            <button onclick="addCourse()">Submit</button>
+        </div>
+        <table class="course-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Content</th>
+                    <th>Due date</th>
+                    <th>Status</th>
+                    <th>Assigned to</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="course-list"></tbody>
+        </table>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
